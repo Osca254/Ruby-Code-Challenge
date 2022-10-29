@@ -26,7 +26,7 @@ class Magazine
   end
 
   def contributing_authors
-   Magazine.
+   
   end
 
 end
