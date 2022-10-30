@@ -6,11 +6,13 @@ class Author
   end
 
   def articles
-    Article.all.select{|article| article.author==@name}
+    Article.all.select do 
+      |article| article.author==@name
   end
 
   def magazines
-    articles.map{|article| article.magazine}.uniq
+    articles.map do
+      |article| article.magazine.uniq
   end
 
   def add_article(magazine,title)
@@ -18,7 +20,8 @@ class Author
   end
 
    def topic_areas
-    magazines.collect{|magazine|magazine.category}.uniq
+    magazines.collect do
+    |magazine|magazine.category.uniq
    end
 
 end
