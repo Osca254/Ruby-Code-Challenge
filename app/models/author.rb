@@ -20,8 +20,7 @@ class Author
   end
 
    def topic_areas
-    magazines.collect do
-    |magazine|magazine.category.uniq
+    @category.uniq
    end
 
 end
