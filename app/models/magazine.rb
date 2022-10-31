@@ -1,8 +1,8 @@
 class Magazine
     
   attr_accessor :name, :category
-  @@all = []    #class variable "all" returning an array of Magazine instances
-
+     #class variable "all" returning an array of Magazine instances
+     @@all = [] 
   def initialize(name, category)
     @name = name
     @category = category
@@ -17,12 +17,12 @@ class Magazine
     @category
   end
 
-  #helper method
+  #helper method1
   def articles_magazines
     Article.all.filter{|article|article.magazine==@name}
   end
   
-  #helper method
+  #helper method2
   def authors_of_magazines
     articles_magazines.map{|article|article.author}
   end
